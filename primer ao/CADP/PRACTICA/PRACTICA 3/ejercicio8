@@ -1,0 +1,85 @@
+program uno;
+type 
+cadena=string;
+
+datos = record
+dni: integer;
+nombre,apellido:cadena;
+email:cadena;
+end;
+
+proyecto = record
+ano: integer;
+codigo : integer;
+titulo:cadena;
+docente:datos;
+cantidad:integer;
+nombreescuela:cadena;
+localidad:cadena;
+end;
+function analizarnombre(e:proyecto):boolean;
+var
+num,dig,par,impar:integer;
+begin
+num:= e.codigo;
+par:= 0;
+impar:= 0;
+while (num<>0) do begin
+dig:= num mod 10;
+if ((dig mod 2 ) = 0) then
+	par:=par+1
+	else
+	impar:=impar+1;
+num:=num div 10;
+end;
+analizarnombre := (par=impar);
+end;
+procedure analizarmaximos(e:proyecto;var e1:proyecto;var e2:proyecto;cantlocal:integer);
+begin
+if (e.cantidad > e1.cantidad) then
+ begin
+e2:= e1;
+e1:= e;
+end;
+if (e.cantidad > e2.cantidad) then
+e2.cantidad:= e.cantidad;
+end;
+procedure Leer( var e:proyecto); 
+begin
+writeln('ingrese año'); readln(e.ano);
+writeln('ingrese codigo del proyecto');readln(e.codigo);
+if (e.codigo <>-1) then begin
+writeln('ingrese titulo');readln(e.titulo);
+writeln('dni docente'); readln(e.docente.dni);
+writeln (' nombre y apellido '); readln(e.docente.nombre);readln(e.docente.apellido);
+writeln('email del docente'); readln(e.docente.email); 
+writeln('cantidad de alumnos'); readln(e.cantidad);
+writeln('nombre de la escuela'); readln(e.nombreescuela);
+writeln('localidad '); readln(e.localidad);
+end;
+end;
+var
+e,e1,e2:proyecto;
+canttotal:integer;
+cantlocal:integer;
+localidadactual:string;
+begin
+Leer(e);
+canttotal:=0;
+e1.cantidad:= -1;
+e2.cantidad:=-1;
+while (e.codigo <> -1) do begin
+cantlocal:=0;
+localidadactual:= e.localidad;
+	while (e.codigo<>-1) and (e.localidad = localidadactual)do begin
+		cantlocal:= cantlocal+1;
+		canttotal:= canttotal+1;
+		analizarmaximos(e,e1,e2,cantlocal);
+		if 	(analizarnombre(e)) and (e.localidad = 'Daireaux') then
+		writeln (' el titulo del proyecto es :'  , e.titulo);
+		Leer(e);
+	end;
+	Writeln ( ' la cantidad total de alumnos de la ', localidadactual,'  es   ' , cantlocal);
+end;
+writeln ('Nombres de las dos escuelas con mayor cantidad de alumnos participantes', e1.nombreescuela, ' y ' , e2.nombreescuela);
+end.

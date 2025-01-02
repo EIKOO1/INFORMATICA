@@ -1,0 +1,51 @@
+{5.	Realizar un programa que lea información de autos que están a la venta en una concesionaria. De cada auto se lee: marca, modelo y precio.
+*  La lectura finaliza cuando se ingresa la marca “ZZZ” que no debe procesarse. 
+* La información se ingresa ordenada por marca. Se pide calcular e informar:
+a.	El precio promedio por marca.
+b.	Marca y modelo del auto más caro.
+}
+program cinco;
+type
+auto= record
+marca: string;
+modelo:integer;
+precio:real;
+end;
+procedure leer(var e:auto);
+begin
+writeln('ingrese marca '); readln(e.marca);
+if (e.marca<> 'ZZZ') then begin
+writeln('ingrese modelo'); readln(e.modelo);
+writeln('ingrese precio'); readln(e.precio);
+end;
+end;
+procedure carmax(e:auto; var max:real;var emax:auto);
+begin
+if (e.precio>max) then begin
+emax:=e;
+max:=e.precio;
+end;
+end;
+var
+emax,e:auto;
+max,prom:real;
+cant:integer;
+actual:string;
+begin
+max:=-1;
+leer(e);
+while (e.marca<> 'ZZZ') do begin
+carmax(e,max,emax);
+cant:=0;
+prom:= 0;
+actual:= e.marca;
+while (e.marca<> 'ZZZ') and (e.marca=actual) do begin
+	cant:= cant+1;
+	prom:= prom+e.precio;
+		leer(e);
+	end;
+writeln('la cantidad de autos de la marca : ', actual, ' es ', cant);
+writeln('el promedio de la marca',actual,'es',(prom/cant):5:3);
+writeln('la marca y el modelo del auto mas caro es : ', emax.marca ,' y ',emax.modelo);
+end;
+end.

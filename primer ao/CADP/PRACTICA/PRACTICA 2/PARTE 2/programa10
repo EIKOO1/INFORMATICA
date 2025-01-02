@@ -1,0 +1,59 @@
+{10.	Realizar un programa modularizado que lea una secuencia de caracteres y verifique si cumple con el patrón A$B#, donde:
+-	A es una secuencia de sólo letras vocales
+-	B es una secuencia de sólo caracteres alfabéticos sin letras vocales
+-	los caracteres $ y # seguro existen
+Nota: en caso de no cumplir, informar que parte del patrón no se cumplió.}
+program diez ;
+function esvocal(a:char):boolean;
+begin
+esvocal:= (a='a')or (a= 'e') or (a='i') or (a= 'o') or (a='u');
+end;
+procedure cumpleA(var cumple:boolean);
+var
+a:char;
+begin
+writeln('ingrese la secuencia A'); readln(a);
+while (a<>'$' ) and (cumple) do begin
+	if (not esvocal(a)) then
+		cumple:= false
+		else
+		begin
+	writeln('ingrese otra vocal'); readln(a);
+	end;
+end;
+end;
+function sinvocal(b:char):boolean;
+begin
+sinvocal:= (b<>'a') and (b<>'e') and (b<>'i') and(b<>'o') and (b<>'u');
+end;
+procedure cumpleB(var cumple:boolean);
+var
+b:char;
+begin
+writeln('ingrese una secuencia de letras sin vocales');readln(b);
+while (b<> '#') and(cumple) do begin
+	if (not sinvocal(b)) then
+		cumple:=false
+		else begin
+	writeln('ingrese otra letra no vocal');readln(b);
+	end;
+end;
+
+end;
+var
+cumple:boolean;
+begin
+cumple:= true;
+cumpleA(cumple);
+	if (cumple) then 
+	begin
+		cumpleB (cumple);
+			if (cumple) then
+				writeln('cumple con la secuencia')
+			else
+				writeln('no cumple la secuencia');	
+						
+end
+else
+	writeln('no cumple la secuencia en x ');
+end.

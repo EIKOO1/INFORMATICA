@@ -1,0 +1,9 @@
+program ejercicio6;
+var
+pesos,comision:real;
+begin
+
+writeln('ingrese cantidad de dolars a transferir'); readln(pesos);
+comision:= (pesos*189.32)*1.04;
+writeln (' la transaccion sera de :' , comision:2:2);
+end.

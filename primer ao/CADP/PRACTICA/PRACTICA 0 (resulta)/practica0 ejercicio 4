@@ -1,0 +1,8 @@
+program ejercicio5;
+var
+x,y: integer;
+begin
+	writeln('ingrese cantidad de caramelos y cantidad de clientes'); readln(x);readln(y);
+	writeln ('la cantidad que le corresponde a cada cliente es de ', x div y);
+	writeln(' la cantidad que se queda el kioskero es  ', x mod y);
+	end.

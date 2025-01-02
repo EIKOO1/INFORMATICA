@@ -1,0 +1,175 @@
+{Una productora nacional realiza un casting de personas para la selección de actores extras de una nueva película, para ello se debe leer y 
+* almacenar la información de las personas que desean participar de dicho casting. De cada persona se lee: DNI, apellido y nombre, edad y el código 
+* de género de actuación que prefiere (1: drama, 2: romántico, 3: acción, 4: suspenso, 5: terror). La lectura finaliza cuando llega una persona 
+* con DNI 33555444, la cual debe procesarse.  
+Una vez finalizada la lectura de todas las personas, se pide:  
+a.Informar la cantidad de personas cuyo DNI contiene más dígitos pares que impares. 
+b.Informar los dos códigos de género más elegidos. 
+c.Realizar un módulo que reciba un DNI, lo busque y lo elimine de la estructura. El DNI puede no existir invocar dicho módulo en el programa principal. }
+program uno;
+type
+rango =  1..5;
+casting: record
+dni:integer;
+nombre,apellido:string[20];
+edad:integer;
+genero:rango;
+end;
+
+lista = ^nodo;
+
+nodo: record;
+dato:casting;
+sig:lista;
+end;
+
+procedure cargandoactor (c:casting);
+begin
+	writeln ('INGRESE EL DNI'); readln (c.dni);
+	writeln ('APELLIDO'); readln (c.apellido);
+	writeln ('NOMBRE');readln (c.nombre);
+	writeln ('GENERO DE ACTUACION'); readln (c.genero);
+end;
+	
+procedure agregaradelante (var l:lista ; c:casting);
+var
+nuevo:lista;
+begin
+	vcontador =  array [rango] of integer;
+	new (nuevo); //genero espacio
+	nuevo^.dato:= c;
+	nuevo^.sig:= nil;
+	if (l = nil) then //si es el primer elemento
+		l:= nuevo	 //la lista deja de apuntar a nil y apunta al primer y nuevo nodo
+	else			//sino
+		begin
+			nuevo^.sig:= l; // el siguiente elemento apuntara a el primer elemento de la lista
+			l:=nuevo;	//y nuevo pasa a ser mi primer elemento de la lista;
+		end;
+end;
+
+procedure cargarlista (var l:lista);
+var
+c:casting;
+begin
+
+repeat
+	cargandoractor (c); //cargo el registro
+	agregaradelante (l,c); //lo ingreso en la lista
+until (c.dni = 3355);
+end;
+
+procedure descomponerdni (n:integer; var cantidadpares);
+var
+par,impar:integer;
+digito:integer;
+begin
+pares:=0
+impares:0;
+	while (n <> 0) do
+	begin
+	digito:= n mod 10;	//Me quedo con el ultimo digito del dni
+		if (digito mod 2= 0)then	
+			pares:= pares+1
+		else
+			impares:= impares+1;
+	n:= n div 10;
+	end;
+	if (pares > impares)then
+		cantidadpares:= cantidadpares +1;
+end;
+
+procedure inicializarvector ( var v:vectorcontador);
+var
+i:rango
+begin
+	for i := 1 to 4 do 
+		v[i]:= 0;
+end;
+
+procedure cargarvector (var v:vcontador; g:rango);
+begin
+	v[g]:= v[g]+1;
+end;
+
+procedure recorrerlista (l:lista;var v:vcontador);
+{a.Informar la cantidad de personas cuyo DNI contiene más dígitos pares que impares. }
+{b.Informar los dos códigos de género más elegidos. }
+var
+aux:lista;
+n:integer;
+cantidadpares:integer;
+begin
+	cantidadpares:= 0; 
+	aux:=l //utilizo la variable lista para recorrer el lista
+	while (aux <> nil) do 
+	begin
+		n:= aux^.dato.dni;
+		descomponerdni (n,cantidadpares); //A
+		cargarvector (v,aux^.dato.genero); 
+	end;
+end;
+
+procedure actualizarmaximos ( v:vcontador);
+var
+max1,max2:integer;
+posmax1,posmax2:rango;
+i:rango;
+begin
+	max1:= -1;
+	max2:=-1;
+	for i := 1 to 4 do
+	begin
+		if (max1> v[i])then
+			begin
+				max2:= max1;
+				posmax2:= posmax1;
+				max1:= v[i];
+				posmax1:=i;
+			end
+		else
+			if (max2 > v[i]) then
+				begin
+					max2:= v[i];
+					posmax2:= i;
+				end;
+	end;
+writeln ('la categoria mas elegida fue la : ', posmax1);
+writeln ('la segunda mas elegida fue :',posmax2);
+end;
+
+procedure eliminardnilista(var l:lista; dni:integer);
+var
+anterior,actual:lista;
+begin
+	anterior:=l;
+	actual:= l;
+	while (actual<> nil) and (actual^.dato.dni <> dni) do
+	begin
+		anterior:= actual;
+		actual:= actual^.sig;
+	end;
+	if (actual <>nil) then
+		begin
+			if (actual=anterior)then //si es el primer elemento
+				l:=l^.sig
+			else
+				anterior^.sig:= actual^.sig;
+			dispose (actual);
+		end;
+
+end;
+var
+l:lista;
+v:vcontador;
+DNI:integer;
+begin
+	l:= nil;
+	inicializarvector(v);
+	crearlista(l);
+	recorrerlista(l,v);
+	actualizarmaximos(v);
+	writeln ('ingrese dni para eliminar'); 
+		readln (dni);
+		eliminardnilista(l;dni);
+end;

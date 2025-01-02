@@ -1,0 +1,32 @@
+program dos;
+type 
+fecha= record
+dia:integer;
+mes:string;
+ano:integer;
+end;
+procedure leer (var a:fecha);
+var
+primerosmeses,primerosdias:integer;
+begin
+primerosmeses:=0;
+primerosdias:=0;
+	writeln('ingrese ano');readln(a.ano);
+	while (a.ano=2019)do begin
+			writeln('ingrese dia'); readln(a.dia);
+	writeln('ingrese mes '); readln(a.mes);
+	if ( a.mes='enero')or (a.mes='febrero')or(a.mes='marzo') then
+		primerosmeses:=primerosmeses+1;
+if (a.dia >= 1) and (a.dia<=10) then
+	primerosdias:=primerosdias+1;
+	
+	writeln('ingrese ano');readln(a.ano);
+end;
+writeln ('casamientos en los primeros meses', primerosmeses);
+writeln('casamientos en los primeros dias', primerosdias);
+end;
+var
+casamiento:fecha;
+begin
+leer(casamiento);
+end.

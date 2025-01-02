@@ -1,0 +1,69 @@
+{Realizar un programa que lea información de centros de investigación de Universidades Nacionales. De cada
+centro se lee su nombre abreviado (ej. LIDI, LIFIA, LINTI), la universidad a la que pertenece, la cantidad de
+investigadores y la cantidad de becarios que poseen. La información se lee de forma consecutiva por
+universidad y la lectura finaliza al leer un centro con 0 investigadores, que no debe procesarse. Informar:
+1● Cantidad total de centros para cada universidad. 
+2● Universidad con mayor cantidad de investigadores en sus centros.
+3● Los dos centros con menor cantidad de becarios.}
+
+program SIETE ;
+type 
+Centro= record
+nombre:string;
+universidad:string;
+investigadores:integer;
+becarios:integer;
+end;
+procedure evaluarmin(e:centro;var emin1:centro;var emin2:centro;cantbecarios:integer);
+begin
+if (cantbecarios < emin1.becarios)then
+begin
+emin2:=emin1;
+emin1:= e;
+end;
+if (cantbecarios < emin2.becarios)then
+emin2:= e;
+end;
+procedure evaluarmax(uniactual:string;var max:integer;var unimax:string;cantinv:integer);
+begin
+if ( cantinv > max) then begin
+	max:= cantinv;
+	unimax:= uniactual;
+	end;
+end;
+procedure Leer(var e:centro);
+begin
+writeln('ingrese cantidad de investigadores'); readln(e.investigadores);
+if (e.investigadores >0 )then begin
+writeln('ingrese nombre');readln(e.nombre);
+writeln('ingrese universidad a la que pertenece');readln(e.universidad);
+writeln('ingrese cantidad de becarios'); readln(e.becarios);
+end;
+end;
+var
+emin1,emin2,e:centro;
+unimax,uniactual:string;
+cantbecarios,cantinv,cant,max:integer;
+BEGIN
+Leer(e);
+max:=-1;
+emin1.becarios:= 1000;
+emin2.becarios:=1000;
+while (e.investigadores >0 )do begin
+cant:= 0;
+cantinv:=0;
+cantbecarios:=0;
+uniactual:= e.universidad;
+while (e.investigadores>0)and(e.universidad=uniactual)do begin
+	cant:= cant+1;		//1
+	cantinv:= cantinv+e.investigadores	;
+	cantbecarios:= cantbecarios+e.becarios;	//2
+	Leer(e);
+end;
+evaluarmax(uniactual,max,unimax,cantinv); //2
+evaluarmin(e,emin1,emin2,cantbecarios);//3
+writeln(' la cantidad de centros por la facultad es : ', cant);
+	end;
+writeln(' la universidad con mayor numero de investigadores es :',unimax);
+writeln('las dos universidad con menos numero de becarios es :',emin1.universidad,' y ' , emin2.universidad);
+END.

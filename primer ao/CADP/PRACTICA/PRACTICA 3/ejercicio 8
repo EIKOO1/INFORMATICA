@@ -1,0 +1,14 @@
+program uno ;
+type
+vnums = array [1..10] of integer;
+var
+numeros : vnums;
+i: integer;
+begin
+for i :=1 to 10 do 
+numeros[i]:= i;
+for i := 1to 9 do
+	numeros[i]:= numeros [i+1] + numeros[i-1];
+	numeros[10]:= numeros [10]+numeros [9]; //el numero actual mas el anterior 
+	writeln( 'suma es,',numeros[10]);
+end.
