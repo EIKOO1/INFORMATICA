@@ -88,7 +88,33 @@ begin
 				agregarAdelante(l,v[i]);
 		end;
 end;
-
+procedure mostrardatos(p:participantes);
+begin
+  writeln ('DNI : ',p.dni);
+  writeln ('NOMBRE: ',p.nombre);
+  writeln ('APELLIDO: ',p.apellido);
+  writeln  ('CATEGORIA: ',p.cat);
+  writeln (' FECHA DE INSCRIPCION ', p.fecInscrip);
+procedure mostrarVector(v:vector)
+var
+  i:integer;
+begin
+  for i := 1 to diml do
+    begin
+      mostrardatos(v[i]);
+    end;
+end;
+procedure mostrarLista(l:lista);
+begin
+  while (l <> nil) do
+    mostrardatos(l^.dato);
+    l:= l^.sig;
+end;
+procedure mostrar (v:vector;diml:integer ; l:lista);
+begin
+  mostrarVector(v,diml);
+  mostrarLista(l);
+end;
 var
  v:vector;
  diml:integer;
@@ -102,5 +128,6 @@ begin
 	inicializarVectorContador(vc);
 	procesarVector(v,diml,vc);
 	cargarLista(v,diml,vc,l);
+  mostrar(v,diml,l)
 	end.
 
