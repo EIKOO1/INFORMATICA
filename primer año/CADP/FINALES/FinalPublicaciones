@@ -1,5 +1,3 @@
-
-
 program Hello;
 type
 subPublicaciones = 1..12;
@@ -33,17 +31,17 @@ procedure cargarLista (var l:lista);
 var
     p:publicacion;
 begin
-    writeln ("INGRESE DNI"); readln (p.dni);
+    writeln ('INGRESE DNI'); readln(p.dni);
     while (p.dni <> 0) do 
         begin
-            writeln ("INGRESE titulo"); readln (p.titulo);
-            writeln ("INGRESE NOMBRE"); readln (p.autor);
-            writeln ("ingrese tipo de publicacion"); readln (p.tipo);
+            writeln ('INGRESE titulo'); readln (p.titulo);
+            writeln ('INGRESE NOMBRE'); readln (p.autor);
+            writeln ('ingrese tipo de publicacion'); readln (p.tipo);
             agregarLista(l,p);
-            writeln ("INGRESE DNI "); readln (p.dni);
+            writeln ('INGRESE DNI '); readln (p.dni);
         end;
 end;
-procedure inicializarVector (var v:vector)
+procedure inicializarVector (var v:vector);
 var
     i:integer;
 begin
@@ -63,7 +61,7 @@ begin
                 max:=v[i];
                 tipo:=i;
             end;
-    writeln ("el tipo con mas Publicaciones es " , tipo);
+    writeln ('el tipo con mas Publicaciones es ' , tipo);
 end;
 
 
@@ -82,7 +80,7 @@ begin
                     v[l^.dato.tipo]:=v[l^.dato.tipo]+1;
                     l:=l^.sig;
                 end;
-            writeln ("La cantidad de publicaciones de ", actual, "es : " , cantActual);
+            writeln ('La cantidad de publicaciones de ', actual, 'es : ' , cantActual);
         end;
     mostarTipomax(v);
 end;
@@ -93,6 +91,6 @@ var
 begin
   l:=nil;
   cargarLista(l);
-  inicializarVector(v)
+  inicializarVector(v);
   recorrerLista(l,v);
 end.
