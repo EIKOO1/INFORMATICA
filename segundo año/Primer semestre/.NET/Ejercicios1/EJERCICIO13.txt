@@ -1,0 +1,13 @@
+
+/* Si a y b son variables enteras, identificar el problema (y la forma de resolverlo) de la siguiente
+expresión. Tip: observar qué pasa cuando b = 0.
+if ((b != 0) & (a/b > 5)) Console.WriteLine(a/b);
+*/
+int a,b;
+a =100;
+b=0;
+if ((b != 0) && (a/b > 5)) Console.WriteLine(a/b);  
+
+/* PROBLEMA : Se quiere divir por 0 por ende el programa no deja
+   solucion Utilizo and cortocircuito ya que analiza la primera condicion y si es falsa no analiza la segunda ;
+*/

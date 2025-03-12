@@ -1,0 +1,3 @@
+7) Qué hace la instrucción Console.WriteLine("100".Length); 
+
+Rta : Imprime la cantidad de caracteres del String.
