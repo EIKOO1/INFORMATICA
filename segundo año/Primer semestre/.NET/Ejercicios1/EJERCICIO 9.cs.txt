@@ -12,3 +12,21 @@ if ((st[pri] == ' ') && (st[ult] == ' '))  //evaluo por que condicion salio.
     Console.WriteLine("Son iguales");
 else
     Console.WriteLine("No son iguales");
+
+"----------------------------------------------------------------------"
+OTRA FORMA DE HACERLO 
+String st  = Console.ReadLine();
+bool ok = !string.IsNullOrWhiteSpace(st);
+int pri=0;
+int ult=st.Length-1;
+
+while ((st[pri]!= ' ') && (st[pri]==st[ult])) { //st en la primera posicion distinto de espacio y los caracteres sean iguales.
+    pri++;
+    ult--;                  //avanzo y retrocedo una posicion.
+}
+
+if (st[pri] == st[ult])  //evaluo por que condicion salio.
+    Console.WriteLine("Son iguales");
+else
+    Console.WriteLine("No son iguales");
+ 
