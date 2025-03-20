@@ -2,7 +2,7 @@
 
 program Ejercicio3;
 type
-	comando = 1..4;
+	comando = 1..5;
 	empleado = record
 		num:integer;
 		apellido:String[20];
@@ -111,12 +111,14 @@ BEGIN
 			writeln('2 PARA MOSTRAR LISTA CON UN APELLIDO');  //
 			writeln('3 PARA MOSTRAR LOS EMPLEADOS');
 			writeln('4 PARA MOSTRAR empleados mayores de 70 años, próximos a jubilarse');
+			writeln('5 PARA SALIR');
 			readln(n);
 			case n of
 				1:crearArchivo(arch);
 				2:mostarListaApellido(arch);
 				3:mostrarTodos(arch);
 				4:mostrarmayores(arch);
+				5:ok:=false;
 		end;
 	
 end;
