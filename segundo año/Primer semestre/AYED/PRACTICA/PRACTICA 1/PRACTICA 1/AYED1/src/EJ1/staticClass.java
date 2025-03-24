@@ -1,3 +1,4 @@
+package EJ1;
 
 public class staticClass {
 
@@ -17,5 +18,5 @@ static void recorrerRecursivo(int a,int b) {
 	recorrerRecursivo(++a, b);
 		}
 	}
-}
+}	
 
