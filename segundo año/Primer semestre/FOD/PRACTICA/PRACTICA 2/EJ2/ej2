@@ -1,0 +1,137 @@
+
+
+
+program untitled;
+
+const
+	valoralto = 9999;
+type 
+
+	producto =  record
+		cod:integer;
+		nombre:String[20];
+		stock:integer;
+		stockMinimo:integer;
+		end;
+
+	venta =  record
+		cod:integer;
+		cantV:integer;
+		end;
+	
+archivo = file of producto;		
+
+ventaDiaria =  file of venta;
+		
+procedure leerProducto (var p:producto);
+begin
+	writeln ('INGRESE COD DE PRODUCTO');readln (p.cod);
+	if (p.cod<>0)then
+		begin
+			writeln ('INGRESE NOMBRE DEL COMERCILIZANTE');readln (p.nombre);
+			writeln ('INGRESE STCOK ACTUAL'); readln (p.stock);
+			writeln('INGRESE STOCK MINIMO'); readln (p.stockMinimo);
+		end;	
+end	;
+
+procedure cargarMaestro (var maestro:archivo);	
+var
+	p:producto;
+begin
+	assign (maestro,'maestro.dat');
+	rewrite(maestro);
+	leerProducto(p);
+	while (p.cod <> 0 )do
+		begin
+			write(maestro,p);
+			leerProducto(p);
+		end;
+	close (maestro);
+	writeln ('....ARCHIVO CREADO CON EXITO....');
+end;
+
+procedure leerVenta (var v:venta);
+begin
+	writeln ('INGRESE CODIGO DE VENTA');readln (v.cod);
+	writeln ('INGRESE CANTIDAD VENDIDAS');readln (v.cantV);
+end;
+
+procedure cargarDetalle (var detalle:ventaDiaria);
+var
+	v:venta;
+begin
+	assign (detalle,'ventasDia.dat');
+	rewrite(detalle);
+	leerVenta(v);
+	while (v.cod <> 0 )do
+		begin
+			write (detalle,v);
+			leerVenta(v);
+		end;
+	close (detalle);
+	writeln ('....DETALLE CREADO CON EXITO....');
+end;
+
+procedure leer (var detalle:ventaDiaria;var v:venta);
+begin
+	if (not eof (detalle))then
+		read (detalle,v)
+	else
+		v.cod := valoralto;
+end;
+
+procedure actualizarMaestro (var maestro:archivo;var detalle:ventaDiaria);
+var
+	emp:producto;
+	v:venta;
+	codActual:integer;
+	cantTotal:integer;
+begin
+	reset (maestro);
+	reset (detalle);
+	leer(detalle,v);
+	while (v.cod <> valoralto)do	
+		begin
+			codActual :=  v.cod;
+			cantTotal:= 0;
+			while (v.cod = codActual)do
+				begin
+					cantTotal:=cantTotal + v.cantV;
+					leer(detalle,v);
+				end;
+		//una vez encontrado busco en el maestro el producto
+		read(maestro,emp);
+		while(codActual<>emp.cod)do
+			read(maestro,emp);
+		
+		emp.stock:= emp.stock-cantTotal;
+		
+		seek(maestro,filepos(maestro)-1);
+		write(maestro,emp);
+		end;
+end;
+procedure imprimirMaestro(var mae: archivo);
+var
+    p: producto;
+begin
+    reset(mae);
+    while(not eof(mae)) do
+        begin
+            read(mae, p);
+            with p do
+                writeln('Codigo=', cod, ' StockActual=', stock, ' StockMin=', stockMinimo, ' Nombre=', nombre);
+        end;
+    close(mae);
+end;
+var
+maestro:archivo;
+detalle:ventaDiaria;
+
+begin
+	cargarMaestro (maestro);
+	cargarDetalle (detalle);
+	actualizarMaestro (maestro,detalle);
+	imprimirMaestro(maestro);
+	
+END.
+
