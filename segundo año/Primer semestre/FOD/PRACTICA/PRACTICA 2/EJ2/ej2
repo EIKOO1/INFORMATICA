@@ -123,6 +123,25 @@ begin
         end;
     close(mae);
 end;
+
+procedure crearArchivoTxt (var maestro:archivo);
+var
+	archText :  text;
+	maeReg:producto;
+begin
+	assign (archText,'stock_minimo.txt');
+	rewrite(archText);
+	reset (maestro);
+	while (not eof(maestro))do
+		begin
+			read(maestro,maeReg); 
+			if (maeReg.stock < maeReg.stockMinimo)then
+				readln (archText,maeReg.cod,maeReg.stock,maeReg.stockMinimo,maeReg.nombre);
+		end;
+	close (archText);
+	close (maestro);
+	writeln ('Archivo creado...');
+end;
 var
 maestro:archivo;
 detalle:ventaDiaria;
@@ -131,7 +150,6 @@ begin
 	cargarMaestro (maestro);
 	cargarDetalle (detalle);
 	actualizarMaestro (maestro,detalle);
-	imprimirMaestro(maestro);
-	
+	crearArchivoTxt(maestro);
 END.
 
