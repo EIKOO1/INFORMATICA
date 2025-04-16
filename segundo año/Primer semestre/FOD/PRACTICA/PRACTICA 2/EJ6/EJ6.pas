@@ -128,6 +128,8 @@ begin
 		end;
 		
 end;	
+
+
 procedure leerRegMaestro(var reg:ministerio);
 begin
 	writeln ('INGRESE COD DE LOCALIDAD');readln (reg.codL);
@@ -144,6 +146,8 @@ begin
 
 
 end;
+
+
 procedure crearMaestro (var mas:maestro);
 var
 	reg:ministerio;
