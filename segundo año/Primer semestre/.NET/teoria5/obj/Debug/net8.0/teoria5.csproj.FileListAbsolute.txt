@@ -1,0 +1,15 @@
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\bin\Debug\net8.0\teoria5.exe
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\bin\Debug\net8.0\teoria5.deps.json
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\bin\Debug\net8.0\teoria5.runtimeconfig.json
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\bin\Debug\net8.0\teoria5.dll
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\bin\Debug\net8.0\teoria5.pdb
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.AssemblyInfoInputs.cache
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.AssemblyInfo.cs
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.csproj.CoreCompileInputs.cache
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.sourcelink.json
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.dll
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\refint\teoria5.dll
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.pdb
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\teoria5.genruntimeconfig.cache
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria5\obj\Debug\net8.0\ref\teoria5.dll

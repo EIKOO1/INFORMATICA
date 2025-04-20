@@ -128,6 +128,7 @@ begin
 					regAux.tiempoT:= regAux.tiempoT + min.tiempo_sesion;
 					minimo(v,regdet,min);
 				end;
+			
 			write (mas,regAux);
 		end;
 		
