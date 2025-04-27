@@ -1,7 +1,6 @@
 using System;
 using teoria6;
 namespace teoria6;
-
  class Auto : Automotor 
 {
     public TipoAuto Tipo;
@@ -14,4 +13,9 @@ namespace teoria6;
         Console.Write($"Auto {Tipo} ");
         base.Imprimir(); //hace referencia a la superclase
     }
+class Taxi :Auto{
+    public int Pasajeros { get; private set; }
+public Taxi(int pasajeros) : base("FORD",2023,TipoAuto.Deportivo) =>this.Pasajeros = pasajeros;
 }
+}
+//algo parecido al ejercicio 4
