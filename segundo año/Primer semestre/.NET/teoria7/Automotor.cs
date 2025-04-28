@@ -3,7 +3,10 @@ using System;
 namespace teoria7;
 
 
-class Automotor
+class Automotor 
 {
 protected string Marca = "";
+public void Imprimir(){
+    Console.WriteLine($"Marca {Marca}");
+}
 }

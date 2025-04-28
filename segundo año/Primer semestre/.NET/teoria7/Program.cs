@@ -1,13 +1,19 @@
 ﻿using teoria7;
 
-
-
-object[] vector = [
-new Moto("Zanella"),
-new Empleado("Juan"),
-new Moto("Gilera")];    
- foreach ( object o in vector)
- {
-    Console.WriteLine(o.ToString());
- }
-
+StreamReader? sr = null;
+StreamWriter? sw = null;
+try
+{
+sr = new StreamReader("fuente.txt");
+sw = new StreamWriter("destino.txt");
+sw.Write(sr.ReadToEnd());
+}
+catch (Exception e)
+{
+Console.WriteLine(e.Message);
+}
+finally
+{
+sr?.Dispose();
+sw?.Dispose();
+}
