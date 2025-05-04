@@ -1,0 +1,15 @@
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\bin\Debug\net8.0\teoria7b.exe
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\bin\Debug\net8.0\teoria7b.deps.json
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\bin\Debug\net8.0\teoria7b.runtimeconfig.json
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\bin\Debug\net8.0\teoria7b.dll
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\bin\Debug\net8.0\teoria7b.pdb
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.AssemblyInfoInputs.cache
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.AssemblyInfo.cs
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.csproj.CoreCompileInputs.cache
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.sourcelink.json
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.dll
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\refint\teoria7b.dll
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.pdb
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\teoria7b.genruntimeconfig.cache
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\teoria7b\obj\Debug\net8.0\ref\teoria7b.dll
