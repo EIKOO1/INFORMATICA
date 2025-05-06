@@ -4,10 +4,10 @@ namespace Sistema.Aplicacion.Entidades;
 
 public class Pelicula : IEsAlquilable
 {
-    public void SeAlquila (Persona p){
-        Console.WriteLine ($"SE ALQUILA A PERSONA");
+    public virtual void SeAlquila (Persona p){
+        Console.WriteLine ($"Alquilando pelìcula a persona ");
     }
-    public void Devolver (Persona p){
-        Console.WriteLine($"PELICULA DEVUELTA POR PERSONA");
+    public virtual void Devolver (Persona p){
+        Console.WriteLine($"pelicula devuelta por persona");
     }
 }
