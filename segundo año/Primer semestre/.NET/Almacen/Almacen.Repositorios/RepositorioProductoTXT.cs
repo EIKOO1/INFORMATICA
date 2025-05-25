@@ -59,7 +59,7 @@ public class RepositorioProductoTXT : IRepositorioProducto
 
     public void EliminarProducto(int id)
     {
-                List <Producto> lista = ListarProductos();
+        List <Producto> lista = ListarProductos();
         using var sw = new StreamWriter (_nombreArch,false);
         foreach (Producto l in lista){
         if (l.Id == id){

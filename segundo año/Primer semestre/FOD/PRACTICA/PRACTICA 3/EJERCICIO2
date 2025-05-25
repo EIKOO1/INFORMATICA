@@ -1,0 +1,70 @@
+program Ejercicio2Practica3;
+const
+	marca='@';
+type
+	cadena = String[20];
+	asistente = record
+		nro:integer;
+		apellido:cadena;
+		nombre:cadena;
+		email:string;
+		telefono:integer;
+		dni:integer;
+	end;
+
+
+
+maestro = file of asistente;
+
+procedure LeerAsistente(var a:asistente);
+begin
+	writeln ('Ingrese : ');
+	write('NUMERO DE ASISTENTE : ');readln(a.nro);
+	if (a.nro <> 000)then
+		begin
+			write('APELLIDO : ');readln(a.apellido);
+			write('NOMBRE : ');readln(a.nombre);
+			write('EMAIL : ');readln(a.email);
+			write('TELEFONO : ');readln(a.telefono);
+			write('DNI : ');readln(a.dni);
+		end
+end;
+
+procedure crearArchivo (var mae:maestro);
+var
+	a:asistente;
+begin
+	rewrite(mae);
+	LeerAsistente(a);
+	while (a.nro <> 000)do
+		begin
+			write(mae,a);
+			LeerAsistente(a);
+		end;
+	close(mae);
+end;
+
+procedure Borrar(var mae:maestro);
+var
+	a:asistente;
+begin
+	reset (mae);
+	while (not eof(mae))do
+		begin
+			read(mae,a);
+			if (a.nro < 1000)then
+				begin
+					a.nombre := ' @ '+ a.nombre;
+					Seek(mae,FilePos(mae)-1);
+					write(mae,a);
+				end;
+		end;
+	close(mae);
+end;
+var
+	mae:maestro;
+begin
+	crearArchivo(mae);
+	Borrar(mae);
+end.
+	
