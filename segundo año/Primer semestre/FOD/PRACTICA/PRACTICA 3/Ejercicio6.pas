@@ -93,7 +93,7 @@ begin
 	while (not eof(mae))do
 		begin
 			read(mae,regmae);
-			if(regmae.cod_prenda<0)then
+			if(regmae.cod_prenda>0)then
 				write(nuevoArchivo,regmae);		
 		end;
 	writeln('aa');
@@ -140,12 +140,12 @@ begin
 	while (not eof (mae))do
 		begin
 			read(mae,reg);
-			write('CODIGO DE PRENDA : ' ,reg.cod_prenda );
-			write('DESCRIPCION : ' , reg.descripcion);
-			write('Colores : ',reg.colores);
-			write('Tipo de prenda : ',reg.tipo_prenda);
-			write('Stock actual : ',reg.stock);
-			write('Precio Unitario : ',reg.precio_unitario);
+			writeln( 'CODIGO  : ' ,reg.cod_prenda );
+			writeln(' DESCRIPCION : ' , reg.descripcion);
+			writeln(' Colores : ',reg.colores);
+			writeln(' Tipo de prenda : ',reg.tipo_prenda);
+			writeln( ' Stock actual : ',reg.stock);
+			writeln(' Precio Unitario : ',reg.precio_unitario:0:0);
 		end;
 
 end;
@@ -157,8 +157,8 @@ BEGIN
 	assign(mae,'maestro.dat');
 	assign(det,'detalle.dat');
 	//crearMaestro(mae);
-	//crearDetalle(det);
 	listarMaestro(mae);
+	crearDetalle(det);
 	darDeBajaPrendas(mae,det);
 	listarMaestro(mae);
 END.
