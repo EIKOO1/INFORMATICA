@@ -1,0 +1,16 @@
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\bin\Debug\net8.0\AL.Repositorios.deps.json
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\bin\Debug\net8.0\AL.Repositorios.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\bin\Debug\net8.0\AL.Repositorios.pdb
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\bin\Debug\net8.0\al.Aplicacion.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\bin\Debug\net8.0\al.Aplicacion.pdb
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.csproj.AssemblyReference.cache
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.AssemblyInfoInputs.cache
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.AssemblyInfo.cs
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.csproj.CoreCompileInputs.cache
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.sourcelink.json
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repos.05DDFA7F.Up2Date
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\refint\AL.Repositorios.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\AL.Repositorios.pdb
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Repositorios\obj\Debug\net8.0\ref\AL.Repositorios.dll

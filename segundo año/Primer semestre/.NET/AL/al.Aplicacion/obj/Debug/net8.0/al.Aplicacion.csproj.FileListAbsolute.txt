@@ -1,0 +1,12 @@
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\bin\Debug\net8.0\al.Aplicacion.deps.json
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\bin\Debug\net8.0\al.Aplicacion.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\bin\Debug\net8.0\al.Aplicacion.pdb
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.AssemblyInfoInputs.cache
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.AssemblyInfo.cs
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.csproj.CoreCompileInputs.cache
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.sourcelink.json
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\refint\al.Aplicacion.dll
+c:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\al.Aplicacion.pdb
+C:\Users\facuv\OneDrive\Escritorio\INFORMATICA\segundo año\Primer semestre\.NET\AL\al.Aplicacion\obj\Debug\net8.0\ref\al.Aplicacion.dll

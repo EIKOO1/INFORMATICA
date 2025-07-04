@@ -1,0 +1,15 @@
+﻿@page "/hola"
+@rendermode InteractiveServer
+<button @onclick="Cambiar">Mostrar / Ocultar</button>
+@if (EsVisible)
+{
+ <h1>Hola @nombre.ToUpper()</h1>
+ <a href="https://www.youtube.com/watch?v=oUMsNjCDT8I"></a>;
+}
+@code {
+ string nombre = "Juan";
+ bool EsVisible = true;
+ void Cambiar() {
+ EsVisible = !EsVisible;
+ }
+}

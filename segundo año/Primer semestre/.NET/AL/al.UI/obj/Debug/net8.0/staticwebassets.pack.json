@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\al.UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\al.UI.bundle.scp.css"
+    },
+    {
+      "Id": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.al.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.al.UI.props",
+      "PackagePath": "build\\al.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.al.UI.props",
+      "PackagePath": "buildMultiTargeting\\al.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.al.UI.props",
+      "PackagePath": "buildTransitive\\al.UI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

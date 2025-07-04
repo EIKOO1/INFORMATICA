@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "al.Aplicacion/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/al.Aplicacion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/al.Aplicacion.dll": {}
+        }
+      },
+      "AL.Repositorios/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "al.Aplicacion": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AL.Repositorios.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AL.Repositorios.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "al.Aplicacion/1.0.0": {
+      "type": "project",
+      "path": "../al.Aplicacion/al.Aplicacion.csproj",
+      "msbuildProject": "../al.Aplicacion/al.Aplicacion.csproj"
+    },
+    "AL.Repositorios/1.0.0": {
+      "type": "project",
+      "path": "../al.Repositorios/AL.Repositorios.csproj",
+      "msbuildProject": "../al.Repositorios/AL.Repositorios.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "AL.Repositorios >= 1.0.0",
+      "al.Aplicacion >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\facuv\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\al.UI.csproj",
+      "projectName": "al.UI",
+      "projectPath": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\al.UI.csproj",
+      "packagesPath": "C:\\Users\\facuv\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.UI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\facuv\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.Aplicacion\\al.Aplicacion.csproj": {
+              "projectPath": "c:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.Aplicacion\\al.Aplicacion.csproj"
+            },
+            "C:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.Repositorios\\AL.Repositorios.csproj": {
+              "projectPath": "C:\\Users\\facuv\\OneDrive\\Escritorio\\INFORMATICA\\segundo año\\Primer semestre\\.NET\\AL\\al.Repositorios\\AL.Repositorios.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

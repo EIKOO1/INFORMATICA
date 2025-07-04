@@ -138,12 +138,45 @@ begin
 	while (not eof (mae))do
 		begin
 			read(mae,reg);
+			writeln('----------------------');
 			writeln(' CODIGO DE AVE ',reg.codigo);
 			writeln(' NOMBRE DE LA ESPECIE ',reg.nombreEspecie);
 			writeln(' FAMILIA DE LA ESPECIE ',reg.descripcion);
 			writeln(' DESCRIPCION ',reg.descripcion);
 			writeln(' ZONA DE LA ESPECIE ',reg.zona);
+			writeln('----------------------');
 		end;
+	close(mae);
+end;
+
+procedure compactarTodos(var mae:maestro);
+var
+	regaux:especies;
+	regmae:especies;
+	pos:integer;
+	posAc:integer;
+begin
+	reset(mae); //abro el archivo
+	pos:=FileSize(mae); //me quedo con el tamanio 
+	read(mae,regmae);             
+	writeln(pos);
+	while (regmae.codigo <> pos)do;
+		begin
+			if (regmae.codigo < 0)then
+				begin
+					posAc:=FilePos(mae);  //posicion donde se encontro el elemento a borrar
+					Seek(mae,pos); //final del archivo
+					read(mae,regaux); //REGISTRO DEL FINAL DEL ARCHIVO
+					Seek(mae,pos);
+					write(mae,regmae);
+					Seek(mae,posAc); //me posiciono en la que estaba;
+					write(mae,regaux);
+					pos:= pos-1 //decremento uno el final del archivo
+				end;
+			read(mae,regmae);
+		end;
+	Seek(mae,pos);
+	truncate(mae);
 	close(mae);
 end;
 
@@ -157,10 +190,12 @@ BEGIN
 	ok:=true;
 	while ok do
 		begin
+			writeln();
+			
 			writeln('INGRESE 1 PARA CREAR EL ARCHIVO AVE');
 			writeln('INGRESE 2 PARA BORRAR UN AVE POR CODIGO');  //se puede usar mas de una vez
 			writeln('INGRESE 3 PARA COMPACTAR EL ARCHIVO DE AVES TRUNCANDO MAS DE UNA VEZ ');	//Compacta mas de una vez
-			//writeln('INGRESE 4 PARA COMPACTAR EL ARCHIVO DE AVES TRUNCANDO UNA SOLA VEZ');	//compata todo de una sola vez
+			writeln('INGRESE 4 PARA COMPACTAR EL ARCHIVO DE AVES TRUNCANDO UNA SOLA VEZ');	//compata todo de una sola vez
 			writeln('INGRESE 5 PARA LISTAR');
 			writeln('6 PARA SALIR');
 			writeln();
@@ -171,7 +206,7 @@ BEGIN
 				1:crearMaestro(mae);  //hecho
 				2:darBajaLogica(mae);	//hecho
 				3:compactar(mae);	//hecho
-				//4:compactarTodos(mae);
+				4:compactarTodos(mae);
 				5:listar(mae);
 				6:ok:=false;
 			end;
